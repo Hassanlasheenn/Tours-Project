@@ -1,0 +1,22 @@
+{
+  "name": "tours-project",
+  "version": "1.0.0",
+  "description": "Landing page for tours",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hassanlasheenn/Tours-Project.git"
+  },
+  "author": "Hassan Lasheen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hassanlasheenn/Tours-Project/issues"
+  },
+  "homepage": "https://github.com/Hassanlasheenn/Tours-Project#readme",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
