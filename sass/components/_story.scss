@@ -5,12 +5,18 @@
     background-color: $color-white;
     border-radius: 3px;
     padding: 6rem;
+    padding-left: 9rem;
     font-size: $default-font-size;
+    transform: skewX(-12deg);
+
+    // direct child element to all elements (text & shape)
+    & > * {
+        transform: skewX(12deg);
+    }
 
     &__shape {
         width: 15rem;
         height: 15rem;
-        background-color: orangered;
         float: left;
         // to make the text flows around the shape of a circle
         -webkit-shape-outside: circle(50% at 50%% 50%);
@@ -18,5 +24,37 @@
         // make the element look like a circle we use the clip-path
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
+        transform: translateX(-3rem) skewX(12deg);
+        position: relative;
+    }
+
+    &__image {
+        height: 100%;
+    }
+
+    &__text {
+    }
+
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .3s;
+    }
+
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover &__image {
+        -webkit-filter: blur(.4rem);
+        filter: blur(.4rem);
     }
 } 
