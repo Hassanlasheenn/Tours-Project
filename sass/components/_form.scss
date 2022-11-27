@@ -17,19 +17,41 @@
         width: 90%;
         display: block;
 
+        // when input is focused
         &:focus {
             outline: none;
             box-shadow: 0 1rem 2rem rgba($color-black, .1);
             border-bottom: 3px solid $color-primary;
+
+            // input-form validation
+            &:invalid {
+                border-bottom: 3px solid $color-secondary-dark;
+            }
         }
 
+        // styling place-holder
         &::-webkit-input-placeholder {
             color: $color-grey-dark-form;
         }
+
     }
 
     
     &__label {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        transition: all .3s;
+    }
 
+    // + sign is known as adjacent sibling selector which is the direct sibling after the first assigned sibling
+    // ~ sign is general sibling selector if there is more siblings in betweeen
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
     }
 }
