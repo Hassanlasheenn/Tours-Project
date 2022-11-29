@@ -13,3 +13,55 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+// Media Query
+
+/*
+0 - 600px => Phone
+600px - 900px => Tablet in Portrait mode
+900px - 1200px => Tablet in Landscape mode
+1200px - 1800px => normal Desktop screen that are applied
+1800px+ => Big Desktop Screens
+
+
+$ breakpoint argument choices:
+- phone
+- tablet-port
+- tablet-land
+- big-desktop
+*/
+
+
+// ems responsive unit is the best choice to use in media queries
+// 1em = 16px
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        // max-width: 600px
+        @media (max-width: 37.5em) {
+            @content 
+        };
+    }
+    @if $breakpoint == tablet-port {
+        // max-width: 900px
+        @media (max-width: 56.25em) {
+            @content 
+        };
+    }
+    @if $breakpoint == tablet-land {
+        // max-width: 1200px
+        @media (max-width: 75em) {
+            @content 
+        };
+    }
+    @if $breakpoint == big-desktop {
+        // max-width: 1800px
+        @media (min-width: 112.5em) {
+            @content 
+        };
+    }
+}
+
+
+
+

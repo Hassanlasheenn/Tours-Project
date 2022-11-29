@@ -1,3 +1,17 @@
+/*
+0 - 600px => Phone
+600px - 900px => Tablet in Portrait mode
+900px - 1200px => Tablet in Landscape mode
+1200px - 1800px => normal Desktop screen that are applied
+1800px+ => Big Desktop Screens
+
+
+$ breakpoint argument choices:
+- phone
+- tablet-port
+- tablet-land
+- big-desktop
+*/
 *,
 *::after,
 *::before {
@@ -7,6 +21,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }

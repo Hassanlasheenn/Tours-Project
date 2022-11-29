@@ -9,9 +9,23 @@
 
 html {
     // defines what 1rem is
-    font-size: 62.5%;
+    font-size: 62.5%;   // 1rem = 10px;  10px/16px = 62.5%
+
+    // order of the queries is important always the larger ones at first and then the small ones
+    @include respond(tablet-land) { // width < 1200px
+        font-size: 56.25%; // 1rem = 9px; 9/16 = 56%
+    }
+
+    @include respond(tablet-port) { // width < 900px
+        font-size: 50%; // 1rem = 8px; 8/16 = 50%
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%;  // 1rem = 12px; 12/16
+    }
 }
 
 body {
     box-sizing: border-box;
 }
+
