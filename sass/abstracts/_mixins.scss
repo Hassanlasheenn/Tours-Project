@@ -33,6 +33,9 @@ $ breakpoint argument choices:
 */
 
 
+// ORDER: Base + Typography > general layout + grid > page layout > components
+
+
 // ems responsive unit is the best choice to use in media queries
 // 1em = 16px
 @mixin respond($breakpoint) {
