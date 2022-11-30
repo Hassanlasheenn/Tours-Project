@@ -117,7 +117,7 @@ body {
       font-size: 3rem; } }
   @media (max-width: 37.5em) {
     .heading-secondary {
-      font-size: 2.5rem; } }
+      font-size: 1.5rem; } }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -126,6 +126,9 @@ body {
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase; }
+  @media (max-width: 37.5em) {
+    .heading-tertiary {
+      font-size: 1.2rem; } }
 
 .paragraph {
   font-size: 1.6rem; }
@@ -149,6 +152,12 @@ body {
 
 .u-margin-bottom-small {
   margin-bottom: 1.5rem !important; }
+  @media (max-width: 56.25em) {
+    .u-margin-bottom-small {
+      margin-bottom: 1rem !important; } }
+  @media (max-width: 37.5em) {
+    .u-margin-bottom-small {
+      margin-bottom: .3rem !important; } }
 
 .u-margin-top-big {
   margin-top: 8rem !important; }
@@ -167,6 +176,10 @@ body {
   font-size: 1.6rem;
   border: none;
   cursor: pointer; }
+  @media (max-width: 75em) {
+    .btn, .btn:link, .btn:visited {
+      padding: 1rem 2rem;
+      font-size: 1.2rem; } }
 
 .btn:hover {
   transform: translateY(-0.3rem);
@@ -602,17 +615,32 @@ body {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all .5s .2s; }
+    @media (max-width: 75em) {
+      .popup__content {
+        width: 75%; } }
   .popup__left {
     width: 33.33333%;
     display: table-cell; }
+    @media (max-width: 75em) {
+      .popup__left {
+        width: 33.333%; } }
   .popup__right {
     width: 66.66666%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem; }
+    @media (max-width: 75em) {
+      .popup__right {
+        width: 33.333%; } }
+    @media (max-width: 37.5em) {
+      .popup__right {
+        width: 75%; } }
   .popup__img {
     display: block;
     width: 100%; }
+    @media (max-width: 37.5em) {
+      .popup__img {
+        width: 100%; } }
   .popup__text {
     font-size: 1.4rem;
     margin-bottom: 4rem;
@@ -626,6 +654,20 @@ body {
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto; }
+    @media (max-width: 75em) {
+      .popup__text {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        column-count: 1;
+        column-gap: normal;
+        column-rule: 0; } }
+    @media (max-width: 37.5em) {
+      .popup__text {
+        font-size: .7rem;
+        margin-bottom: 1rem;
+        column-count: 2;
+        column-gap: normal;
+        column-rule: 0; } }
   .popup:target {
     opacity: 1;
     visibility: visible; }
