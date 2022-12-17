@@ -9,6 +9,16 @@
     opacity: 0;
     visibility: hidden;
     transition: all .3s;
+    backdrop-filter: blur(10px);
+    background-color: rgba($color-black, .5);
+
+    // the backdrop-filter property doesn't work except for the safari browser so we can use the graceful degredation using the @supports rule
+    // however the property now works in google chrome without the need to use graceful degredation!!
+    // @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filer: blur(10px)) {
+    //     background-color: rgba($color-black, .3);
+    //     -webkit-backdrop-filter: blur(10px);
+    //     backdrop-filter: blur(10px);
+    // }
 
    
     &__content {
